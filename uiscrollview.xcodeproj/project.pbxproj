@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		13BE64E51D80316F00FC0350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE64E41D80316F00FC0350 /* AppDelegate.swift */; };
 		13BE64E71D80316F00FC0350 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BE64E61D80316F00FC0350 /* ViewController.swift */; };
-		13BE64EA1D80316F00FC0350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BE64E81D80316F00FC0350 /* Main.storyboard */; };
+		13BE64EA1D80316F00FC0350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BE64E81D80316F00FC0350 /* Main.storyboard */; settings = {ASSET_TAGS = (svsubview, ); }; };
 		13BE64EC1D80316F00FC0350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13BE64EB1D80316F00FC0350 /* Assets.xcassets */; };
 		13BE64EF1D80316F00FC0350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BE64ED1D80316F00FC0350 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -90,6 +90,9 @@
 		13BE64D91D80316F00FC0350 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					svsubview,
+				);
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "李宗育";
@@ -288,6 +291,7 @@
 				13BE64F51D80316F00FC0350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

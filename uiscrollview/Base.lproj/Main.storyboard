@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uiscrollview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2n-QP-ile">
+                                <rect key="frame" x="270.5" y="40" width="60" height="30"/>
+                                <state key="normal" title="增加高度"/>
+                                <connections>
+                                    <action selector="addsubview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q8t-Pn-esp"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-PW-XJS">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmu-GB-HBS" userLabel="subview">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-ps-QXx">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                                <color key="backgroundColor" red="1" green="0.24890922670000001" blue="0.26744192989999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="uhD-9V-qha"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chA-GV-0Q8">
+                                                <rect key="frame" x="0.0" y="150" width="600" height="170"/>
+                                                <color key="backgroundColor" red="0.34022857410000001" green="1" blue="0.92857230690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="170" id="od4-W5-R6Y"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.29666950040000001" green="1" blue="0.40927545900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QiA-ps-QXx" secondAttribute="trailing" id="85C-NB-0J5"/>
+                                            <constraint firstAttribute="bottom" secondItem="chA-GV-0Q8" secondAttribute="bottom" id="87E-nW-Wpk"/>
+                                            <constraint firstAttribute="trailing" secondItem="chA-GV-0Q8" secondAttribute="trailing" id="dSO-kt-uoW"/>
+                                            <constraint firstItem="chA-GV-0Q8" firstAttribute="leading" secondItem="Gmu-GB-HBS" secondAttribute="leading" id="gzz-BD-iGX"/>
+                                            <constraint firstItem="QiA-ps-QXx" firstAttribute="top" secondItem="Gmu-GB-HBS" secondAttribute="top" id="llB-vP-C4k"/>
+                                            <constraint firstItem="chA-GV-0Q8" firstAttribute="top" secondItem="QiA-ps-QXx" secondAttribute="bottom" id="wRD-RN-RZW"/>
+                                            <constraint firstItem="QiA-ps-QXx" firstAttribute="leading" secondItem="Gmu-GB-HBS" secondAttribute="leading" id="wsw-dd-hWe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gmu-GB-HBS" secondAttribute="trailing" id="4WL-vx-ITL"/>
+                                    <constraint firstItem="Gmu-GB-HBS" firstAttribute="width" secondItem="2K6-PW-XJS" secondAttribute="width" id="CCh-2o-1hc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gmu-GB-HBS" secondAttribute="bottom" id="Irq-mx-SuN"/>
+                                    <constraint firstItem="Gmu-GB-HBS" firstAttribute="top" secondItem="2K6-PW-XJS" secondAttribute="top" id="IxZ-w2-knB"/>
+                                    <constraint firstItem="Gmu-GB-HBS" firstAttribute="leading" secondItem="2K6-PW-XJS" secondAttribute="leading" id="XHJ-Mj-rvM"/>
+                                    <constraint firstItem="Gmu-GB-HBS" firstAttribute="centerX" secondItem="2K6-PW-XJS" secondAttribute="centerX" id="Xp2-UQ-lk7"/>
+                                    <constraint firstAttribute="height" constant="300" id="ge4-lF-u7p"/>
+                                    <constraint firstItem="Gmu-GB-HBS" firstAttribute="top" secondItem="2K6-PW-XJS" secondAttribute="top" id="lCb-hk-7XD"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-sn-oII">
+                                <rect key="frame" x="270" y="78" width="60" height="30"/>
+                                <state key="normal" title="恢復高度"/>
+                                <connections>
+                                    <action selector="addsubview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="riI-sA-Mgx"/>
+                                    <action selector="restoreHeight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ff-m3-bko"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yb2-sn-oII" firstAttribute="top" secondItem="a2n-QP-ile" secondAttribute="bottom" constant="8" id="BxF-mQ-bU2"/>
+                            <constraint firstItem="a2n-QP-ile" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GaP-PO-7GZ"/>
+                            <constraint firstItem="a2n-QP-ile" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="L4U-0f-odp"/>
+                            <constraint firstItem="2K6-PW-XJS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="V5h-G8-ESw"/>
+                            <constraint firstItem="2K6-PW-XJS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YEa-74-DCL"/>
+                            <constraint firstItem="Yb2-sn-oII" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l2D-mY-N3q"/>
+                            <constraint firstItem="2K6-PW-XJS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ySg-ul-RfI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addSubViewHight" destination="87E-nW-Wpk" id="kvP-hX-mNd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="265"/>
         </scene>
     </scenes>
 </document>
